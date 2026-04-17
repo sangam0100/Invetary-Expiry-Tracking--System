@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg-color: #f8fafc;
+  --surface-color: #ffffff;
+  --card-color: #ffffff;
+  --text-color: #0f172a;
+  --heading-color: #0f172a;
+  --muted-text: #475569;
+  --border-color: #e2e8f0;
+  --navbar-bg: #0f172a;
+  --navbar-text: #f8fafc;
+  --sidebar-bg: #1f2937;
+  --button-bg: #3b82f6;
+  --button-text: #ffffff;
+  --shadow-color: rgba(15, 23, 42, 0.08);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-color: #020617;
+  --surface-color: #111827;
+  --card-color: #1f2937;
+  --text-color: #f8fafc;
+  --heading-color: #ffffff;
+  --muted-text: #cbd5e1;
+  --border-color: #334155;
+  --navbar-bg: #0f172a;
+  --navbar-text: #f8fafc;
+  --sidebar-bg: #0f1224;
+  --button-bg: #2563eb;
+  --button-text: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 700;
+  text-shadow: 0 1px 2px var(--shadow-color);
+  letter-spacing: -0.025em;
+}
+
+p, span, li, a {
+  color: var(--text-color);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
+  color: var(--heading-color) !important;
+}
+
+.dark p, .dark span, .dark li, .dark a {
+  color: var(--text-color) !important;
+}
+
+.navbar-app {
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.surface-app {
+  background: var(--surface-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.sidebar-app {
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+  box-shadow: 4px 0 12px var(--shadow-color);
+}
+
+.card-app {
+  background: var(--card-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  box-shadow: 0 20px 50px var(--shadow-color);
+}
+
+.btn-app {
+  background: var(--button-bg);
+  color: var(--button-text);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-app:hover {
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
